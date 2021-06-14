@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex container jsb">
+        <strong>Blog-App</strong>
+        <div class="flex">
+          <a href="/" class="btn btn-pri">Home</a>
+          <a href="/users/login" class="btn btn-pri">Login</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="sec-padding">
+        <div class="container hero-sec">
+          <h2 class="text-center">User Registration form</h2>
+        </div>
+      </section>
+      <section class="sec-padding">
+        <div class="container">
+          <form action="/users/register" method="POST">
+            <h3 class="text-center">Register</h3>
+            <input type="text" placeholder="first Name" name="firstName" />
+            <input type="text" placeholder="Last Name" name="lastName" />
+            <input type="email" placeholder="email" name="email" />
+            <input type="text" placeholder="city" name="city" />
+            <input type="text" placeholder="password" name="password" />
+            <a href="#"
+              ><button class="btn btn-pri" type="submit">Submit</button></a
+            >
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
