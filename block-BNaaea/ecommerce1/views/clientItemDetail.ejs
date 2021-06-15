@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/7c7efbb78c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex container jsb">
+        <!-- <strong>Amazon</strong> -->
+        <img class="logo" src="/images/logo.png" alt="logo" />
+        <div class="flex">
+          <a href="/client/item/list" class="btn btn-ter">item list</a>
+          <a href="/client/item/cart" class="btn btn-ter"> cart</a>
+          <a href="/users/logout" class="btn btn-ter">Logout</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="sec-padding">
+        <div class="container hero-sec">
+          <h2 class="text-center">
+            <span class="color-sec">User</span> Item details page
+          </h2>
+        </div>
+      </section>
+      <section class="sec-padding flex center">
+        <div class="container">
+          <article class="item-details-card">
+            <h2 class="text-center underline"><%= item.name %></h2>
+            <div class="img-div">
+              <img class="flexi-img" src="<%= item.image %>" alt="item image" />
+            </div>
+            <h4 class="text-center">
+              Quantity remaining:-
+              <span class="color-pri"><%= item.quantity %></span>
+            </h4>
+            <h4 class="text-center">
+              Price :- <span class="color-pri"><%= item.price %></span>
+            </h4>
+            <h4 class="text-center">
+              Likes :- <span class="color-pri"><%= item.likes %></span>
+            </h4>
+            <div class="btn-div">
+              <a href="/client/item/<%= item.id  %>/like" class="color-pri"
+                ><i class="fas fa-thumbs-up"></i
+              ></a>
+              <a href="/client/item/<%= item.id  %>/dislike" class="color-sec"
+                ><i class="fas fa-thumbs-down"></i
+              ></a>
+            </div>
+            <div class="flex center-center">
+              <a
+                href="/client/item/<%= item.id %>/addToCart"
+                class="btn btn-pri"
+                >Add to cart</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex container jsb">
+        <!-- <strong>Amazon</strong> -->
+        <img class="logo" src="/images/logo.png" alt="logo" />
+        <div class="flex">
+          <a href="/admin/item/new" class="btn btn-ter">Add new item</a>
+          <a href="/home" class="btn btn-ter">Dashboard</a>
+          <a href="/users/logout" class="btn btn-ter">Logout</a>
+        </div>
+      </div>
+    </header>
+    <div class="flex">
+      <aside class="flex-25">
+        <section class="sec-padding">
+          <a href="/admin/item/list" class="btn btn-sec">Reset</a>
+          <h2 class="text-center">Categories</h2>
+          <div class="flex flex-wrap tags-div">
+            <% arr.forEach(ele=>{ %>
+            <a href="/admin/item/list/<%=ele  %>" class="btn btn-ter"
+              ><%= ele%></a
+            >
+            <% }) %>
+          </div>
+        </section>
+      </aside>
+      <main class="flex-75">
+        <section class="sec-padding">
+          <div class="container hero-sec">
+            <h2 class="text-center">
+              <span class="color-sec">Admin</span> list page
+            </h2>
+          </div>
+        </section>
+        <section class="sec-padding flex center">
+          <div class="container">
+            <% items.forEach(ele=>{ %>
+            <article class="item-card flex jsb aic">
+              <div class="img-div">
+                <img class="felxi-img" src="<%= ele.image  %>" alt="item img" />
+              </div>
+              <h3><%= ele.name %></h3>
+              <a href="/admin/item/details/<%= ele.id  %>" class="btn btn-pri"
+                >Details</a
+              >
+            </article>
+            <% }) %>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
