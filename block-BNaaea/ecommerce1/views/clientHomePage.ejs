@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex container jsb">
+        <!-- <strong>Amazon</strong> -->
+        <img class="logo" src="/images/logo.png" alt="logo" />
+        <div class="flex">
+          <a href="/client/item/list" class="btn btn-ter">Get List</a>
+          <a href="/client/item/cart" class="btn btn-ter"> cart</a>
+          <a href="/users/logout" class="btn btn-ter">Logout</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="sec-padding">
+        <div class="container hero-sec">
+          <h2 class="text-center">
+            Welcome <span class="color-sec">User</span>
+          </h2>
+          <span class="color-sec text-center"><%= error %> </span>
+        </div>
+      </section>
+      <section class="sec-padding flex center">
+        <div class="container">
+          <h3>Get List of items</h3>
+          <a href="/client/item/list" class="btn btn-pri">Get list</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
