@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex container jsb">
+        <!-- <strong>Amazon</strong> -->
+        <img class="logo" src="/images/logo.png" alt="logo" />
+        <div class="flex">
+          <a href="/admin/item/new" class="btn btn-ter">Add new item</a>
+          <a href="/home" class="btn btn-ter">Dashboard</a>
+          <a href="/users/logout" class="btn btn-ter">Logout</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="sec-padding">
+        <div class="container hero-sec">
+          <h2 class="text-center">
+            <span class="color-sec">Admin</span> user-list page
+          </h2>
+        </div>
+      </section>
+      <section class="sec-padding flex center">
+        <div class="container">
+          <h3>List of Admins</h3>
+          <% adminUsers.forEach(ele => { %>
+          <article class="card">
+            <h4><%= ele.fullName %></h4>
+          </article>
+          <% }); %>
+        </div>
+      </section>
+      <section class="sec-padding flex center">
+        <div class="container">
+          <h3>List of Clients</h3>
+          <% clientUsers.forEach(ele => { %>
+          <article class="card">
+            <h4><%= ele.fullName %></h4>
+          </article>
+          <% }); %>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
