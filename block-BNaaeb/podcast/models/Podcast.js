@@ -11,6 +11,7 @@ let podcastSchema = new Schema(
     forUserType: { type: String, require: true },
     likes: { type: Number, default: 0 },
     createdBy: { type: mongoose.Types.ObjectId, ref: 'User' },
+    verified: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

@@ -10,7 +10,9 @@
   <section class="sec-padding">
     <h2 class="text-center"><%= podcast.name %></h2>
     <div class="flex center sec-padding">
-      <a href="/admin/listOfPodcast" class="btn btn-ter">Back to list</a>
+      <a href="/client/listOfPodcast/<%= user.userType  %>" class="btn btn-ter"
+        >Back to list</a
+      >
     </div>
     <div class="flex center sec-padding">
       <div class="podcastDetails card">
@@ -64,14 +66,6 @@
             >
             <a href="/podcast/<%= podcast.id  %>/delete" class="btn btn-sec"
               >Delete</a
-            >
-          </div>
-          <% } %> <% if(podcast.verified===false){ %>
-          <div class="flex center">
-            <a
-              href="/admin/podcast/<%= podcast.id  %>/verify"
-              class="btn btn-pri"
-              >Click here to Verify</a
             >
           </div>
           <% } %>

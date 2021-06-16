@@ -318,4 +318,36 @@ header {
     margin: 0 auto;
     height: auto;
   }
+  .data-div {
+    & > * {
+      margin-bottom: 2rem;
+    }
+  }
+}
+.btn-div {
+  a {
+    margin-right: 2rem;
+  }
+}
+.max-width-400 {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.podcast {
+  position: relative;
+  overflow: hidden;
+}
+.verified-div {
+  position: absolute;
+
+  padding: 0.5rem 1rem;
+  background-color: orangered;
+  h3 {
+    font-size: 1rem;
+    color: wheat;
+  }
+  right: 0;
+  top: 25;
+
+  transform: rotate(25deg);
 }

@@ -14,6 +14,7 @@ var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
 var adminRouter = require('./routes/admin');
 var clientRouter = require('./routes/client');
+var podcastRouter = require('./routes/podcast');
 var auth = require('./auth/auth');
 
 //database connection
@@ -69,6 +70,7 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 app.use('/client', clientRouter);
+app.use('/podcast', podcastRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -31,4 +31,12 @@ module.exports = {
       return res.redirect('/home');
     }
   },
+  isClient: function (req, res, next) {
+    let user = req.user;
+    if (user.userType !== 'admin') {
+      next();
+    } else {
+      return res.redirect('/home');
+    }
+  },
 };

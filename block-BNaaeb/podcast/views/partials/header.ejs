@@ -27,7 +27,9 @@
         </div>
         <% } %> <% if(user){ %>
         <div class="header-btn">
-          <span class="color-white">Welcome <%= user.name %> </span>
+          <span class="color-white"
+            >Welcome <span class="color-pri"><%= user.name %></span>
+          </span>
           <a href="/home" class="btn btn-ter">Home</a>
           <a href="/users/logout" class="btn btn-ter">Logout</a>
         </div>
